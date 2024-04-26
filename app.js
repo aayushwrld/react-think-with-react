@@ -8,30 +8,30 @@ let container = document.getElementById("react-container")
 
 // Iteration-2
 
-function RectContainer(){
+function ReactContainer() {
   return React.createElement(
     'h1',
-    {id: "h1-tag"},
+    { id: "h1-tag" },
     'Hello!',
-    React.createElement('div',null,"Welcome to react")
-    )
-   
-  }
-  // ReactDOM.render(RectContainer() , container)
+    React.createElement('div', null, "Welcome to react")
+  )
+
+}
+// ReactDOM.render(RectContainer() , container)
 
 
-  // Iteration-3
+// Iteration-3
 
-  class KalviumContainer extends React.Component{
-    render(){
-      return (
-        React.createElement(
-          'h1',
-          {id: "h1-tag"},
-          'Hello!',
-          React.createElement('div',null,"Welcome to react")
-          )
-      )
-    }
-  }
-  ReactDOM.render(React.createElement(KalviumContainer), container)
+class ReactContainer extends React.Component {
+  // JSX tags
+  // JSX there should be one parent element
+  render() {
+    return (
+      <div>Hello! Welcome to Kalvium
+        <div>This is babel</div>
+      </div>)
+  };
+}
+
+// Direclty pass the component to render
+ReactDOM.render(<ReactContainer />, container);
